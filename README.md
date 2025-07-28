@@ -1,34 +1,37 @@
-# PyScript Demo Project
+# Python Code Analysis Tool
 
-A simple, interactive web application that demonstrates the integration of HTML, CSS, JavaScript, and Python using PyScript.
+An interactive web application that allows you to write and analyze Python code directly in the browser using PyScript. This tool provides real-time code analysis capabilities including AST (Abstract Syntax Tree) parsing and code structure examination.
 
 ## Features
 
-### 🧮 Interactive Calculator
-- Pure JavaScript implementation
-- Supports addition, subtraction, multiplication, and division
-- Real-time validation and error handling
-- Keyboard shortcut: `Ctrl/Cmd + Enter` to calculate
+### 🐍 Interactive Python Editor
+- **Ace Editor Integration**: Full-featured code editor with syntax highlighting
+- **Python Execution**: Run Python code directly in the browser using PyScript
+- **Real-time Analysis**: Analyze code structure and find specific elements
 
-### 🐍 Python Data Processing
-- Generate random data points using Python
-- Process and analyze data with statistical calculations
-- Beautiful formatted output with HTML
-- Demonstrates PyScript integration
+### 🔍 Code Analysis Capabilities
+- **AST Parsing**: Convert Python code to Abstract Syntax Tree for analysis
+- **Assignment Detection**: Find and analyze variable assignments in code
+- **RedBaron Integration**: Advanced Python code parsing and manipulation
+- **Variable Tracking**: Identify variables defined in the setup portion of code
 
-### ⏰ Real-time Updates
-- Live clock that updates every second
-- Interactive counter with animations
-- Keyboard shortcut: `Space` to increment counter
+### 🎯 Current Functionality
+- **Code Execution**: Write and run Python code in the browser
+- **Assignment Analysis**: Detect variable assignments using RedBaron
+- **AST Visualization**: Convert code to JSON format for JavaScript processing
+- **Variable Validation**: Check if specific variables exist in code structure
 
 ## Project Structure
 
 ```
 demo/
-├── index.html      # Main HTML file with PyScript integration
-├── styles.css      # Modern, responsive CSS styling
-├── script.js       # JavaScript functionality and interactions
-└── README.md       # This file
+├── index.html          # Main HTML file with PyScript and Ace editor
+├── styles.css          # Modern, responsive CSS styling
+├── script.js           # JavaScript for editor initialization and AST processing
+├── py/
+│   └── main.py         # Python backend with code analysis functions
+├── pyscript.toml       # PyScript configuration and dependencies
+└── README.md           # This file
 ```
 
 ## How to Run
@@ -56,45 +59,53 @@ demo/
 
 ## Technology Stack
 
-- **HTML5**: Semantic structure and PyScript integration
+- **HTML5**: Semantic structure with PyScript integration
 - **CSS3**: Modern styling with gradients, animations, and responsive design
-- **JavaScript (ES6+)**: Interactive functionality and DOM manipulation
+- **JavaScript (ES6+)**: Editor initialization and AST processing
 - **PyScript**: Python execution in the browser
-- **Python**: Data processing and analysis
-
-## PyScript Integration
-
-The project demonstrates several PyScript concepts:
-
-1. **Basic Setup**: Loading PyScript CSS and JavaScript
-2. **Python Code**: Embedded Python in `<py-script>` tags
-3. **Function Exposure**: Making Python functions available to JavaScript
-4. **Data Processing**: Using Python for complex calculations
-5. **Error Handling**: Graceful handling of PyScript loading
+- **Ace Editor**: Professional code editor with syntax highlighting
+- **RedBaron**: Advanced Python code parsing library
+- **ast2json**: AST to JSON conversion for JavaScript processing
 
 ## Key Features Explained
 
-### Calculator (JavaScript)
-- Pure client-side calculation
-- Input validation and error handling
-- Responsive design with hover effects
+### Python Editor
+- **Ace Editor**: Professional code editor with Python syntax highlighting
+- **Auto-completion**: Intelligent code completion and snippets
+- **Theme Support**: Dark theme (Monokai) for better coding experience
+- **Real-time Execution**: Run code immediately with PyScript
 
-### Data Processing (Python + JavaScript)
-- Python generates random data points
-- Statistical analysis (sum, average, min, max)
-- Category grouping and counting
-- Formatted HTML output
+### Code Analysis
+- **AST Generation**: Convert Python code to Abstract Syntax Tree
+- **Assignment Detection**: Find all variable assignments in code
+- **Variable Tracking**: Monitor specific variables in code structure
+- **JSON Export**: Convert AST to JSON for JavaScript processing
 
-### Real-time Features
-- Clock updates every second
-- Counter with visual feedback
-- Keyboard shortcuts for better UX
+### PyScript Integration
+- **Python Execution**: Run Python code directly in the browser
+- **Library Support**: Uses `ast2json` and `redbaron` packages
+- **Function Exposure**: Make Python functions available to JavaScript
+- **Error Handling**: Graceful handling of PyScript loading and execution
+
+## Current Functionality
+
+### Editor 1: Python Execution
+- Write and run Python code
+- See output in the PyScript terminal
+- Basic code execution and testing
+
+### Editor 2: Code Analysis
+- Analyze Python code structure
+- Find variable assignments using RedBaron
+- AST parsing and JSON conversion
+- Variable existence validation
 
 ## Browser Compatibility
 
 - **Modern Browsers**: Chrome, Firefox, Safari, Edge (latest versions)
 - **PyScript Requirements**: Internet connection for initial loading
 - **JavaScript**: ES6+ features used
+- **Ace Editor**: Full browser support with syntax highlighting
 
 ## Development Notes
 
@@ -103,6 +114,16 @@ The project demonstrates several PyScript concepts:
 - **Responsive Design**: Works on desktop and mobile devices
 - **Error Handling**: Graceful fallbacks and user-friendly error messages
 
+## Dependencies
+
+### Python Packages (via PyScript)
+- `ast2json`: Convert Python AST to JSON format
+- `redbaron`: Advanced Python code parsing and manipulation
+
+### JavaScript Libraries
+- **Ace Editor**: Professional code editor
+- **PyScript**: Python execution in browser
+
 ## Troubleshooting
 
 ### PyScript Not Loading
@@ -110,23 +131,34 @@ The project demonstrates several PyScript concepts:
 - Ensure you're using a modern browser
 - Check browser console for error messages
 
-### Functions Not Available
-- Wait a few seconds for PyScript to initialize
-- Check that Python functions are properly exposed to JavaScript
-- Look for console errors
+### Editor Not Working
+- Ensure Ace Editor CDN is accessible
+- Check browser console for JavaScript errors
+- Verify PyScript initialization is complete
 
-### Styling Issues
-- Ensure `styles.css` is in the same directory as `index.html`
-- Check browser console for CSS loading errors
+### Code Analysis Issues
+- Check that Python code is valid syntax
+- Ensure RedBaron can parse the code structure
+- Look for console errors in browser developer tools
+
+## Future Enhancements
+
+This project provides a foundation for:
+- **Advanced Code Analysis**: More sophisticated AST processing
+- **Code Visualization**: Visual representation of code structure
+- **Static Analysis**: Detect potential issues in Python code
+- **Code Metrics**: Calculate complexity, maintainability scores
+- **Refactoring Tools**: Suggest code improvements
 
 ## Customization
 
 Feel free to modify this project:
 
-- **Add More Python Functions**: Extend the `<py-script>` section
+- **Add More Analysis**: Extend the Python analysis functions
 - **Modify Styling**: Update `styles.css` for different themes
 - **Add Features**: Extend `script.js` with new functionality
-- **Change Data**: Modify the data generation in Python
+- **Change Editor**: Modify Ace Editor configuration
+- **Add Libraries**: Include more Python packages in `pyscript.toml`
 
 ## License
 
@@ -134,4 +166,4 @@ This is a demo project. Feel free to use and modify as needed.
 
 ---
 
-**Enjoy exploring the power of PyScript! 🚀** 
+**Enjoy exploring Python code analysis in the browser! 🚀** 
