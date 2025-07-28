@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyScript Demo</title>
+
+    <!-- PyScript CSS -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <!-- This script tag bootstraps PyScript -->
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.43.2/ace.js"
+        integrity="sha512-ZIa+FlPaGDSM+lTl9JaxnQvcfma7ETsOHd9Thbhp5u4RX1uYiDNW7XvUrXv4dJSPetXbiTzWilHEkSg4YpmltQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.43.2/ext-language_tools.min.js"
+        integrity="sha512-EQ+HEoGjbA0ClgWGeEtDNxBMlVya9eI6T8o+iLLj0iSyBMvACBzpTe22RAG2tQRuLhEQdm4OsRd1t52jUN8kgA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>PyScript Demo</h1>
+            <p>A simple project combining HTML, CSS, JavaScript, and Python with PyScript</p>
+        </header>
+
+        <main>
+            <div class="demo-section">
+                <h2>Python Editor</h2>
+                <button id="run">Run</button>
+                <div id="first" class="editor"></div>
+            </div>
+            <div class="demo-section">
+                <h2>Looking at the code</h2>
+                <button id="run2">Run</button>
+                <div id="s" class="editor"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script type="py" src="./py/main.py" config="pyscript.toml" terminal></script>
+    <script>
+        init()
+    </script>
+
+</body>
+
+</html>
